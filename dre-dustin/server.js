@@ -6,13 +6,13 @@
 // Remember to install ExpressJS, and be sure that it's been added to your package.json as a dependency.
 // There is also a package here called body-parser, which is used by the provided POST route. Be sure to install that and save it as a dependency after you create your package.json.
 
-const expressJS = require('express');
+const express = require('express');
 const bodyParser = require('body-parser').urlencoded({extended: true});
 const PORT = process.env.PORT || 3000;
 const app = express();
 
 // TODO: Include all of the static resources as an argument to app.use().
-    app.use(express.static('.public'));
+app.use(express.static('.public'));
 
 // COMMENT: Why are our files in a "public" directory now? How does ExpressJS serve files?
 // PUT YOUR RESPONSE HERE
@@ -25,10 +25,10 @@ app.post('/articles', bodyParser, (request, response) => {
   response.send('Record posted to server!!');
 })
 
-// TODO: Write a new route, using an arrow function, that will handle a request and send the new.html file back to the user
-app.get('/public', function(req, res) {
-  res.sendFile('new.html', {root: './public'});
-
+// TODONE: Write a new route, using an arrow function, that will handle a request and send the new.html file back to the user
+app.get('/public', (req, res) => {
+  res.sendFile('test.html', {root: './public'});
+});
 
 app.listen(PORT, function() {
   // TODO: Refactor this to arrow function, log to the console a message that lets you know which port your server has started on
