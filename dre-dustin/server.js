@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 // TODO: Include all of the static resources as an argument to app.use().
+    app.use(express.static('.public'));
 
 // COMMENT: Why are our files in a "public" directory now? How does ExpressJS serve files?
 // PUT YOUR RESPONSE HERE
@@ -25,10 +26,9 @@ app.post('/articles', bodyParser, (request, response) => {
 })
 
 // TODO: Write a new route, using an arrow function, that will handle a request and send the new.html file back to the user
-app.get('/help', (req,res) => {
-  console.log('Responding to HTTP request at /help');
-  res.sendfile();
-});
+app.get('/public', function(req, res) {
+  res.sendFile('new.html', {root: './public'});
+
 
 app.listen(PORT, function() {
   // TODO: Refactor this to arrow function, log to the console a message that lets you know which port your server has started on
