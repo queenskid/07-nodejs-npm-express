@@ -16,10 +16,10 @@ We first forked the provided project and then cloned it to our local machines an
 we are using HTML5, CSS3 and Javascript. We are also employing JSON, jQuery and handlebars.
 ## Change Log
 
-11-01-2017   am
-11-01-2017   am
-11-01-2017   am
-11-01-2017   am
+- 11-01-2017   9:10am -initialized stuff and also added git ignore to project
+- 11-01-2017   9:20am - additions to lab
+- 11-01-2017   9:45am - additions to server file
+- 11-01-2017   am
 
 ## Credits and Collaborations
 
