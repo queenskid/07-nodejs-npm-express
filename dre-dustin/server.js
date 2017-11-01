@@ -10,7 +10,7 @@ const bodyParser = require('body-parser').urlencoded({extended: true});
 const PORT = process.env.PORT || 3000;
 
 // TODO: Include all of the static resources as an argument to app.use().
-   app.use(express.static('.public'));
+    app.use(express.static('.public'));
 
 // COMMENT: Why are our files in a "public" directory now? How does ExpressJS serve files?
 // PUT YOUR RESPONSE HERE
@@ -24,6 +24,9 @@ app.post('/articles', bodyParser, function(request, response) {
 })
 
 // TODO: Write a new route, using an arrow function, that will handle a request and send the new.html file back to the user
+app.get('/public', function(req, res) {
+  res.sendFile('new.html', {root: './public'});
+
 
 app.listen(PORT, function() {
   // TODO: Refactor this to arrow function, log to the console a message that lets you know which port your server has started on
