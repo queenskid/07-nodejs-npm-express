@@ -129,11 +129,8 @@ articleView.submit = event => {
     body: $('#article-body').val(),
     publishedOn: $('#article-published:checked').length ? new Date() : null
   });
-
   // COMMENTED: Where is this function defined? When is this function called? What event ultimately triggers its execution?
-
-  // insertRecord is a call call back function defined as a prototype to the Article constructor on the article.js file.
-
+  // insertRecord is a defined as a prototype method to the Article constructor on the article.js file. The function is ultimatly triggered when a new article is created on the form on new.html file. 
   article.insertRecord();
 }
 

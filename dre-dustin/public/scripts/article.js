@@ -50,7 +50,7 @@ Article.prototype.insertRecord = function(callback) {
       console.log(data);
 
       // COMMENT: What is the purpose of this line? Is the callback invoked when this method is called? Why or why not?
-      // PUT YOUR RESPONSE HERE
+      // if I am understanding this correctly, this function is looking at the insertRecord method which is posting article data information. So callback is set to call back that function to populate information but if there is no information to post then it closes
       if (callback) callback();
     })
 };
