@@ -11,11 +11,11 @@ const bodyParser = require('body-parser').urlencoded({extended: true});
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-// TODO: Include all of the static resources as an argument to app.use().
+// TODONE: Include all of the static resources as an argument to app.use().
 app.use(express.static('./public'));
 
-// COMMENT: Why are our files in a "public" directory now? How does ExpressJS serve files?
-// PUT YOUR RESPONSE HERE
+// COMMENTED: Why are our files in a "public" directory now? How does ExpressJS serve files?
+// Our files are now in a public directory because that is the files we want the end user to have access to and not all the other files in our project folder.
 
 // TODONE: Refactor to use arrow function
 
@@ -31,5 +31,6 @@ app.get('/public', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  // TODO: Refactor this to arrow function, log to the console a message that lets you know which port your server has started on
+  console.log(`listening on ${PORT}`);
+  // TODONE: Refactor this to arrow function, log to the console a message that lets you know which port your server has started on
 });

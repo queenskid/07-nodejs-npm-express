@@ -1,7 +1,7 @@
 # nodejs-npm-express
 
 **Author**: Dre and Dustin
-**Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
+**Version**: 2.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
 
@@ -17,10 +17,12 @@ we are using HTML5, CSS3 and Javascript. We are also employing JSON, jQuery and 
 ## Change Log
 
 - 11-01-2017   9:10am -initialized stuff and also added git ignore to project
-- 11-01-2017   9:20am - additions to lab
-- 11-01-2017   9:45am - additions to server file
-- 11-01-2017   am
+- 11-01-2017  9:20am - additions to lab
+- 11-01-2017  9:45am - additions to server file
+- 11-01-2017  10:00am - merging with Dre-Dustin branch
+- 11-01-2017  10:15 - comments being entered
+- 11-01-2017  11:15 - server working
 
 ## Credits and Collaborations
 
-Team Dre-Dustin would like to thank the ever confusing labs that forces us look back to our class videos to find out what is really going on. Thank you instructors.
+Team Dre-Dustin would like to thank the ever confusing labs that forces us look back to our class videos to find out what is really going on. Thank you instructors!
