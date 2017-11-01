@@ -73,10 +73,9 @@ articleView.setTeasers = () => {
   });
 };
 
-// COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
-// PUT YOUR RESPONSE HERE
+// COMMENTED: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
 
-//The function below is being called in the new.html page upon page load. 
+//The function below is being called in the new.html page upon page load.
 
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
@@ -89,8 +88,10 @@ articleView.initNewArticlePage = () => {
   $('#new-form').on('submit', articleView.submit);
 };
 
-// COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// COMMENTED: When is this function called? What event ultimately triggers its execution?
+
+// It looks like this function is being called on the previous function called initNewArticlePage so there for the fucntion is being triggered upon page load and addition of a new blog article.
+
 articleView.create = () => {
   let article;
   $('#articles').empty();
@@ -114,8 +115,10 @@ articleView.create = () => {
   $('#article-json').val(`${JSON.stringify(article)},`);
 };
 
-// COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// COMMENTED: When is this function called? What event ultimately triggers its execution?
+
+//This function is also being called on the initNewArticlePage function which is being invoked in the new.html file upon page load.
+
 articleView.submit = event => {
   event.preventDefault();
   let article = new Article({
@@ -127,8 +130,10 @@ articleView.submit = event => {
     publishedOn: $('#article-published:checked').length ? new Date() : null
   });
 
-  // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
-  // PUT YOUR RESPONSE HERE
+  // COMMENTED: Where is this function defined? When is this function called? What event ultimately triggers its execution?
+
+  // insertRecord is a call call back function defined as a prototype to the Article constructor on the article.js file.
+
   article.insertRecord();
 }
 
