@@ -75,6 +75,9 @@ articleView.setTeasers = () => {
 
 // COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
 // PUT YOUR RESPONSE HERE
+
+//The function below is being called in the new.html page upon page load. 
+
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
   $('#export-field').hide();
